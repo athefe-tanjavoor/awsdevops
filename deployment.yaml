@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aatifawsdevops
+  labels:
+    app: aatifawsdevops
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: aatifawsdevops
+  template:
+    metadata:
+      labels:
+        app: aatifawsdevops
+    spec:
+      containers:
+      - name: aatifdevops
+        image: aatif78/awsdevops
+        ports:
+        - containerPort: 3000
+
