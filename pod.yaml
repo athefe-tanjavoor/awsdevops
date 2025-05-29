@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: aatifdevops
+spec:
+  containers:
+  - name: aatifdevops
+    image: aatif78/awsdevops
+    ports:
+    - containerPort: 3000
+

@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+<<<<<<< HEAD
   name: sample-awsdevops
   labels:
     app: sample-awsdevops
@@ -17,6 +18,24 @@ spec:
       containers:
       - name: sample-awsdevops
         image: aatif78/aatifdevops:latest
+=======
+  name: aatifawsdevops
+  labels:
+    app: aatifawsdevops
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: aatifawsdevops
+  template:
+    metadata:
+      labels:
+        app: aatifawsdevops
+    spec:
+      containers:
+      - name: aatifdevops
+        image: aatif78/awsdevops
+>>>>>>> 59dbeae2a1da9d580ca2ea48c9d857f512c106c5
         ports:
         - containerPort: 3000
 
